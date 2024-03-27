@@ -1,4 +1,4 @@
-﻿// Инициализация м
+﻿// Shift
 #include <iostream>
 using namespace std;
 #define tab "\t"
@@ -6,7 +6,7 @@ using namespace std;
 void main()
 {
 	setlocale(LC_ALL, "");
-	//cout << double() << endl;
+	cout << double() << endl;
 	// int()-значение по умолчанию для типа 'int'
 	// double()-значение по умолчанию для типа 'double'
 	const int n = 10;
