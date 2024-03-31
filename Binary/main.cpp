@@ -6,6 +6,7 @@ void main()
 	setlocale(LC_ALL, "");
 	int decimal;  //десятичное число,введенное с клавиатуры
 	cout << "Введите десятичное число:"; cin >> decimal;
+
 	const int MAX_CAPACITY = 32;   //максимально возможная разрядность двоичного числа
 	bool binary[MAX_CAPACITY]{};   //этот массив будет хранить разряды двоичного числа
 
