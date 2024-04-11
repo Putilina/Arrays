@@ -1,4 +1,4 @@
-﻿//Numerics
+﻿//Numerics 28,03,2024
 #include<iostream>
 using namespace std;
 
@@ -49,17 +49,31 @@ void main()
 	}
 	/*for (--i; i >= 0; i--)
 	{
-		if (hex[i] < 10)
-			cout << (int)hex[i];
-		else
-			cout <<char(hex[i] + 55);
+		if (hex[i] < 10)cout << (int)hex[i]; else cout << char(hex[i] + 55);
 	}
 	cout << endl;*/
 
 	for (--i; i >= 0; i--)
 	{
-		cout << char(hex[i] < 10 ? hex[i] + 48 : hex[i] + 55);
+		cout << char(hex[i] < 10 ? hex[i] + '0' : hex[i] + 'A'-10);
+		//cout << char(hex[i] < 10 ? hex[i] + 48 : hex[i] + 55);
+		//(hex[i] < 10) ? cout << (int)hex[i] : cout << char(hex[i] + 55);
+
 	}
+	                          //по хардкору
+	for (; decimal; i++)
+	{
+
+		hex[i] = decimal % 16;//получили остаток от деления на 16
+		hex[i] += hex[i] < 10 ? 48 : 55;// и мы проверяем ,если он меньше < 10,то прибавляем к ниму сразу 48,в противном случае прибавляем 55
+		decimal /= 16;
+	}
+	for (--i; i >= 0; i--)
+	{
+		cout << hex[i];
+	}
+		       // или
+
 	cout << endl;
 
 
